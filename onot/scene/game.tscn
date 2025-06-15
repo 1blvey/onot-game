@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=3 uid="uid://bubfrmqjv0468"]
+
+[ext_resource type="PackedScene" uid="uid://d1hvt8vjf0sw4" path="res://scene/layout_sigma_001.tscn" id="1_dbls1"]
+[ext_resource type="PackedScene" uid="uid://b5jrvqtnjpgtn" path="res://scene/player_free_roam.tscn" id="2_33cqm"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_riodj"]
+sky_top_color = Color(0.0103399, 0, 0.239046, 1)
+sky_horizon_color = Color(0.130506, 0.174784, 0.187683, 1)
+ground_bottom_color = Color(0, 0.187449, 1.68458e-07, 1)
+ground_horizon_color = Color(0.130506, 0.174784, 0.187683, 1)
+
+[sub_resource type="Sky" id="Sky_pgah7"]
+sky_material = SubResource("ProceduralSkyMaterial_riodj")
+
+[sub_resource type="Environment" id="Environment_nwkqs"]
+background_mode = 2
+sky = SubResource("Sky_pgah7")
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="World" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_nwkqs")
+
+[node name="LayoutSigma001" parent="." instance=ExtResource("1_dbls1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.47824, 0, 3.88963)
+
+[node name="Tory Pipers" parent="." instance=ExtResource("2_33cqm")]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -1.49597, 1.19628, 8.14065)

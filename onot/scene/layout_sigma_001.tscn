@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://d1hvt8vjf0sw4"]
+
+[ext_resource type="PackedScene" uid="uid://bxb30gviv7pkb" path="res://scene/LayoutSigma001.glb" id="1_inax1"]
+
+[node name="LayoutSigma001" instance=ExtResource("1_inax1")]
