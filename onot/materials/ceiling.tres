@@ -1,7 +1,0 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bas378mhk17o8"]
-
-[ext_resource type="Texture2D" uid="uid://cbloqh5exhccq" path="res://images/pixil-frame-0_6.png" id="1_0eyn2"]
-
-[resource]
-albedo_texture = ExtResource("1_0eyn2")
-uv1_scale = Vector3(200, 200, 100)

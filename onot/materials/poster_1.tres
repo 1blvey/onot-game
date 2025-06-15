@@ -1,6 +1,0 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://c1d2ddm3o3sbr"]
-
-[ext_resource type="Texture2D" uid="uid://bay14ff0mloag" path="res://images/pixil-frame-0_15.png" id="1_mmy6j"]
-
-[resource]
-albedo_texture = ExtResource("1_mmy6j")
