@@ -1,0 +1,42 @@
+[gd_scene load_steps=3 format=3 uid="uid://c0j64gdyjedgi"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_srop5"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_srop5"]
+size = Vector3(0.742188, 0.934082, 1.84863)
+
+[node name="Desk" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(0.721375, 0, 0, 0, 0.025909, 0, 0, 0, 1.8315, 0, 0.408286, 0)
+mesh = SubResource("BoxMesh_srop5")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(8.70305e-09, 0.025909, 0, -0.42132, 0, 0, 0, 0, 0.740322, 0.175242, 0.193574, 0.533159)
+mesh = SubResource("BoxMesh_srop5")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(8.70305e-09, 0.025909, 0, -0.42132, 0, 0, 0, 0, 0.740322, -0.332234, 0.193574, 0.533159)
+mesh = SubResource("BoxMesh_srop5")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(3.68091e-16, -1.13282e-09, -0.543555, -0.421432, 0, 0, 8.70537e-09, 0.0259159, -2.37595e-08, -0.0463034, 0.193574, 0.163176)
+mesh = SubResource("BoxMesh_srop5")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(6.44801e-16, -1.13282e-09, -0.543555, 4.75192e-08, 0.0259159, -2.37595e-08, 0.738243, -1.13282e-09, -8.92532e-16, -0.0463034, -0.0135745, 0.528576)
+mesh = SubResource("BoxMesh_srop5")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(0.721375, 0, 0, 0, -1.13252e-09, -0.962685, 0, 0.025909, -4.20803e-08, 0, -0.0533695, 0.904449)
+mesh = SubResource("BoxMesh_srop5")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(0.721375, 0, 0, 0, -1.13252e-09, -0.962685, 0, 0.025909, -4.20803e-08, 0, -0.0533695, -0.91618)
+mesh = SubResource("BoxMesh_srop5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0078125, -0.032959, -0.0078125)
+shape = SubResource("BoxShape3D_srop5")
