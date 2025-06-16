@@ -135,17 +135,6 @@ mesh = SubResource("BoxMesh_uihkw")
 transform = Transform3D(20, 0, 0, 0, 0.055, 0, 0, 0, 20, 0, 0, 0)
 shape = SubResource("BoxShape3D_riodj")
 
-[node name="Wall18" type="StaticBody3D" parent="."]
-transform = Transform3D(-1.74769e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 0.399825, -4.37114e-08, 1.91069e-15, -25.6729, -5.716, -10.1312)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Wall18"]
-transform = Transform3D(20, 0, 0, 0, 0.055, 0, 0, 0, 20, 0, 0, 0)
-mesh = SubResource("BoxMesh_uihkw")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Wall18"]
-transform = Transform3D(20, 0, 0, 0, 0.055, 0, 0, 0, 20, 0, 0, 0)
-shape = SubResource("BoxShape3D_riodj")
-
 [node name="Wall19" type="StaticBody3D" parent="."]
 transform = Transform3D(-1.74769e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 0.399825, -4.37114e-08, 1.91069e-15, -25.6729, -5.716, -3.77734)
 
@@ -168,17 +157,6 @@ mesh = SubResource("BoxMesh_uihkw")
 transform = Transform3D(20, 0, 0, 0, 0.055, 0, 0, 0, 20, 0, 0, 0)
 shape = SubResource("BoxShape3D_riodj")
 
-[node name="Wall21" type="StaticBody3D" parent="."]
-transform = Transform3D(-1.74769e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 0.399825, -4.37114e-08, 1.91069e-15, -25.6729, -5.716, 10.2126)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Wall21"]
-transform = Transform3D(20, 0, 0, 0, 0.055, 0, 0, 0, 20, 0, 0, 0)
-mesh = SubResource("BoxMesh_uihkw")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Wall21"]
-transform = Transform3D(20, 0, 0, 0, 0.055, 0, 0, 0, 20, 0, 0, 0)
-shape = SubResource("BoxShape3D_riodj")
-
 [node name="Wall16" type="StaticBody3D" parent="."]
 transform = Transform3D(1.58816e-07, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1.2111, 1.31134e-07, -5.73206e-15, -17.9678, -5.716, -18.2297)
 
@@ -191,7 +169,7 @@ transform = Transform3D(20, 0, 0, 0, 0.055, 0, 0, 0, 20, 0, 0, 0)
 shape = SubResource("BoxShape3D_riodj")
 
 [node name="Wall23" type="StaticBody3D" parent="."]
-transform = Transform3D(5.24307e-08, 1.53801, -4.37114e-08, 0, -6.72284e-08, -1, -0.399825, 2.01685e-07, -5.73206e-15, -25.6931, -5.716, -18.1147)
+transform = Transform3D(1.6452e-08, 1.53801, -4.37114e-08, 0, -6.72284e-08, -1, -0.125459, 2.01685e-07, -5.73206e-15, -25.6931, -5.716, -16.0059)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Wall23"]
 transform = Transform3D(20, 0, 0, 0, 0.055, 0, 0, 0, 20, 0, 0, 0)

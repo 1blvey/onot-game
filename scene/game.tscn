@@ -1,7 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://bubfrmqjv0468"]
+[gd_scene load_steps=14 format=3 uid="uid://bubfrmqjv0468"]
 
-[ext_resource type="PackedScene" uid="uid://d1hvt8vjf0sw4" path="res://scene/layout_sigma_001.tscn" id="1_dbls1"]
 [ext_resource type="PackedScene" uid="uid://b5jrvqtnjpgtn" path="res://scene/player_free_roam.tscn" id="2_33cqm"]
+[ext_resource type="PackedScene" uid="uid://d354wsjgjarty" path="res://scene/LayoutSigma002.tscn" id="2_dbls1"]
+[ext_resource type="Texture2D" uid="uid://bqbxt5hrvf4r5" path="res://images/IMG_4052.jpg" id="2_xwcet"]
+[ext_resource type="PackedScene" uid="uid://bo3wrdxshwld5" path="res://scene/poster_1.tscn" id="3_p1ry8"]
+[ext_resource type="PackedScene" uid="uid://c0j64gdyjedgi" path="res://scene/desk.tscn" id="4_xwcet"]
+[ext_resource type="PackedScene" uid="uid://ea64bmpgux6c" path="res://scene/poster_2.tscn" id="6_xlg7c"]
+[ext_resource type="PackedScene" uid="uid://ik8ppvmdjqj6" path="res://scene/tv.tscn" id="7_qpk70"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_riodj"]
 sky_top_color = Color(0.0103399, 0, 0.239046, 1)
@@ -18,13 +23,44 @@ sky = SubResource("Sky_pgah7")
 tonemap_mode = 2
 glow_enabled = true
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_dbls1"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_33cqm"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dbls1"]
+albedo_texture = ExtResource("2_xwcet")
+uv1_scale = Vector3(10000, 10000, 10000)
+
 [node name="World" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_nwkqs")
 
-[node name="LayoutSigma001" parent="." instance=ExtResource("1_dbls1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.47824, 0, 3.88963)
-
 [node name="Tory Pipers" parent="." instance=ExtResource("2_33cqm")]
-transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -1.49597, 1.19628, 8.14065)
+transform = Transform3D(0.5, 0, 0, 0, 0.72, 0, 0, 0, 0.5, -3.98518, 0.835245, 9.07328)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1943.08, 0, 0, 0, 0.0879796, 0, 0, 0, 3144.89, -1.85203, -0.310514, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_dbls1")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.42407, 0)
+mesh = SubResource("BoxMesh_33cqm")
+surface_material_override/0 = SubResource("StandardMaterial3D_dbls1")
+
+[node name="LayoutSigma002" parent="." instance=ExtResource("2_dbls1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.29031, -0.0176548, 4.16418)
+
+[node name="Desk" parent="." instance=ExtResource("4_xwcet")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -3.8789, 0.506341, 6.99629)
+
+[node name="Poster 1" parent="." instance=ExtResource("3_p1ry8")]
+transform = Transform3D(0.5, 0, 0, 0, -4.37114e-08, -0.5, 0, 1, -2.18557e-08, -4.90742, 1.71204, 6.60787)
+
+[node name="Poster 2" parent="." instance=ExtResource("6_xlg7c")]
+transform = Transform3D(0.5, 0, 0, 0, -4.37114e-08, -0.56, 0, 1, -2.44784e-08, -2.63914, 1.75991, 6.62526)
+
+[node name="TV" parent="." instance=ExtResource("7_qpk70")]
+transform = Transform3D(0.109493, 0, -0.467363, 0, 0.5, 0, 0.458927, 0, 0.111505, -4.12618, 1.18747, 6.91066)
